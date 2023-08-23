@@ -5,7 +5,7 @@
     "entrypoint": "bash",
     "args": [
       "-c",
-      "gcloud config set app/cloud_build_timeout 1600 && gcloud app deploy"
+      "gcloud config set app/cloud_build_timeout 1600 && gcloud app deploy --version v1"
      ]
   }
   ],
