@@ -8,18 +8,17 @@ network:
   session_affinity: true
   forwarded_ports:
     - 8080:80
+
 manual_scaling:
   instances: 1
+
+resources:
+  cpu: 0.5
+  memory_gb: 1
+  disk_size_gb: 5
 
 handlers:
 - url: /.*
   static_files: index.html
   upload: index.html
   secure: always
-
-  resources:
-  cpu: 0.5
-  memory_gb: 1
-  disk_size_gb: 5
-
-  
