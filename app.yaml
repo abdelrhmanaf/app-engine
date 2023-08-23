@@ -6,3 +6,13 @@ handlers:
   static_files: index.html
   upload: index.html
   secure: always
+
+network:
+  name: new-default
+  instance_ip_mode: internal 
+  subnetwork_name: new-default
+  session_affinity: true
+  forwarded_ports:
+    - 8080
+    - 8080:80
+    - 8080/tcp
