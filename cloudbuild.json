@@ -5,7 +5,7 @@
     "entrypoint": "bash",
     "args": [
       "-c",
-      "gcloud config set app/cloud_build_timeout 1600 && gcloud app deploy --version v2 && gcloud app versions start v1 --quiet && gcloud app services set-traffic default --splits v1=0.9,v2=0.1 --quiet"
+      "gcloud config set app/cloud_build_timeout 1600 && gcloud app deploy --version v2 && sleep 180 && gcloud app versions start v1 --quiet && gcloud app services set-traffic default --splits v1=0.9,v2=0.1 --quiet"
      ]
   }
   ],
