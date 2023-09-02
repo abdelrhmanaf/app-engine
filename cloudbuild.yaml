@@ -15,4 +15,4 @@ steps:
           gcloud app deploy --version v1
           sleep 180
         fi
-timeout: '1600s'
+timeout: 1600s
