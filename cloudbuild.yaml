@@ -5,13 +5,13 @@ steps:
       - '-c'
       - |
         if gcloud app versions describe v1 > /dev/null 2>&1; then
-          gcloud config set app/cloud_build_timeout 120
+          gcloud config set app/cloud_build_timeout 300
           gcloud app deploy --version v2
           sleep 180
           gcloud app versions start v1 --quiet
           gcloud app services set-traffic default --splits v1=0.9,v2=0.1 --quiet
         else
-          gcloud config set app/cloud_build_timeout 120
+          gcloud config set app/cloud_build_timeout 300
           gcloud app deploy --version v1
           sleep 180
         fi
